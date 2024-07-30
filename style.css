@@ -1,0 +1,36 @@
+.my-small{
+    font-size: xx-small;
+}
+.container{
+    width: 100%;
+    height: 100%;
+     flex-direction: row;
+    background-color: blue;
+    position: static;
+}
+.row, .row1{
+    width: 100%;
+    height: 20%;
+    display: inline-flex;
+    justify-content: space-around; 
+    border: solid 4px white;
+    align-items: center;
+    background-color: rgb(208, 116, 226);
+}
+.row1{
+    justify-content: space-between; 
+}
+.item{    
+    width: 7%;
+    height: 100%;
+    background-color: blueviolet;
+    border: solid 8px white;
+}
+   .title{
+    position: fixed ;
+    right: 20px;
+    bottom: 10px;
+    background-color: black;
+    color: aliceblue;
+    padding: 10px;
+}
