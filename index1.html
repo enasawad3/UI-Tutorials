@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+        body {
+
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        #page {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(245, 237, 237);
+            text-align: center;
+        }
+
+        #header {
+            order: -8;
+            display: flex;
+            align-items: left;
+            position: fixed;
+            top: 0px;
+            background-color: rgb(39, 182, 187);
+            height: 50px;
+            width: 100%;
+            box-shadow: 0 2px 4px 0 rgba(52, 105, 109, 0.51);
+            /* border: 3px black; */
+        }
+
+        #menu {
+            display: none;
+            position: fixed;
+            left: 0px;
+            top: 50px;
+            background-color: rgb(173, 191, 192);
+            height: 100%;
+            width: 15%;
+            /* box-shadow: 0 4px 2px -2px rgb(228, 224, 224); */
+            z-index: 1;
+            -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+            -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+            box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+        }
+
+
+        #content {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            overflow-y: scroll;
+            position: absolute;
+            top: 52px;
+            bottom: 50px;
+            align-items: center;
+            background-color: rgb(228, 241, 241);
+            width: 100%;
+        }
+
+        #container {
+            text-align: center;
+            margin: 0 auto;
+            background-color: rgb(167, 140, 140);
+            width: 60%;
+            /* height: 60%; */
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+
+
+        }
+
+        p {
+            position: relative;
+            order: -1;
+        }
+
+        #footer {
+            position: fixed;
+            bottom: 0px;
+            background-color: rgb(39, 182, 187);
+            height: 50px;
+            width: 100%;
+            box-shadow: 0 4px 2px -2px rgb(228, 224, 224);
+
+        }
+
+        h1 {
+            background-color: rgb(245, 139, 139);
+            display: block;
+            border: solid 4px red;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        /* menu css */
+        .menu-icon-container {
+            margin: 7px 15px 10px 15px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .bar1,
+        .bar2,
+        .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: #333;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        /* Rotate first bar */
+        .change .bar1 {
+            transform: translate(0, 11px) rotate(-45deg);
+        }
+
+        /* Fade out the second bar */
+        .change .bar2 {
+            opacity: 0;
+        }
+
+        /* Rotate last bar */
+        .change .bar3 {
+            transform: translate(0, -11px) rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page">
+        <div id="header">
+            <div class="menu-icon-container" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+        <div id="menu">
+
+        </div>
+
+        <div id="content">
+            <div id="container"></div>
+            <p>ddddddddddddddddddddddddd</p>
+        </div>
+        <div id="footer">
+
+        </div>
+
+    </div>
+</body>
+<script>
+    var toAdd = document.createDocumentFragment();
+    for (var i = 0; i < 21; i++) {
+        var newDiv = document.createElement('h1');
+        newDiv.id = 'r' + i;
+        newDiv.className = 'ansbox';
+        newDiv.appendChild(document.createTextNode(i));
+
+        toAdd.appendChild(newDiv);
+    }
+    document.getElementById('container').appendChild(toAdd);
+
+    // menu toggle
+    function myFunction(x) {
+        x.classList.toggle("change");
+
+        var x = document.getElementById("menu");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+
+
+
+
+
+</script>
+
+</html>
