@@ -1,0 +1,328 @@
+<html>
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Tajawal' rel='stylesheet'>
+
+    <style>
+        body {
+            height: auto;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal';
+        }
+
+        .header {
+            width: 100%;
+        }
+
+        .header-img {
+            background-image: url("img/header.jpeg");
+            width: 100%;
+            height: 400px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 80%;
+            border-bottom: solid 15px rgba(90, 153, 153, 0.918);
+
+        }
+
+        .header-img-mask {
+            width: 100%;
+            height: 400px;
+            background-color: rgba(0, 0, 0, 0.438);
+            position: relative;
+        }
+
+        .menu {
+            margin-right: 50px;
+        }
+
+        .menu-items {
+            display: flex;
+            justify-content: flex-start;
+            direction: rtl;
+            padding-top: 20px;
+        }
+
+        .menu-item {
+            margin: 5px 10px;
+            padding: 5px 10px;
+            font-family: 'Tajawal';
+            font-size: x-large;
+            font-weight: 500;
+            color: aliceblue;
+            width: auto;
+            direction: rtl;
+            border: solid 1px rgba(57, 116, 116, 0);
+        }
+
+        .menu-item:hover {
+            /* font-weight: 800; */
+            text-shadow: 1px 1px white;
+            border: solid 1px rgb(57, 116, 116);
+            border-radius: 16px;
+        }
+
+        .menu-item-focus,
+        #home {
+            border: solid 1px rgb(128, 179, 179);
+            border-radius: 16px;
+            background-color: rgb(84, 168, 168);
+        }
+
+        #title {
+            color: rgb(255, 255, 255);
+            font-family: 'Tajawal';
+            display: flex;
+            font-size: 60px;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding-bottom: 150px;
+        }
+
+        #logo-circle {
+            width: 250px;
+            height: 250px;
+
+            position: absolute;
+            bottom: -125px;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+
+            background-color: rgb(64, 129, 129);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: solid 1px rgb(111, 155, 155);
+            border-radius: 50%;
+
+            box-shadow: 1px 0px 10px 2px rgb(158, 156, 156);
+        }
+
+        #logo-circle:hover {
+            height: 280px;
+            width: 280px;
+
+        }
+
+        #logo {
+            height: 200px;
+        }
+
+        #banners-container {
+            padding-top: 220px;
+            text-align: center;
+        }
+
+        #banners-title {
+            color: rgb(102, 102, 101);
+        }
+
+        #banners {
+            padding: 50px 50px;
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+
+        .banner {
+            width: 300px;
+            height: 80px;
+            background-color: rgb(207, 208, 211);
+            font-size: 28px;
+            color: rgb(64, 129, 129);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #courses-container {
+            margin-top: 100px;
+            width: 100%;
+            min-height: 340px;
+            background-color: rgb(230, 228, 228);
+            margin-bottom: 50px;
+        }
+
+        #courses-title {
+            margin: 50px;
+            padding-top: 50px;
+            margin-bottom: 30px;
+            direction: rtl;
+        }
+
+        #courses {
+
+            padding: 0 50px;
+            direction: rtl;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .course {
+            margin: 20px;
+            min-width: 500px;
+            width: 30%;
+            height: 150px;
+            border: solid 0px rgb(194, 192, 192);
+            border-radius: 16px;
+            display: flex;
+            box-shadow: 1px 2px 10px 10px rgba(206, 205, 205, 0.514);
+
+        }
+
+        .course-info {
+
+            width: 100%;
+        }
+
+        .course-img {
+
+            height: 100%;
+            border: solid 0px gray;
+            border-radius: 0px 16px 16px 0px;
+        }
+
+        .course-name {
+            direction: rtl;
+            color: gray;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 20px;
+        }
+
+        .show {
+            justify-content: center;
+            margin: 10px;
+            padding: 15px 20px;
+            color: white;
+            font-size: large;
+            background-color: #418686;
+            border: solid 1px #70c5c5;
+            border-radius: 32px;
+        }
+
+        .show-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        #footer {
+            width: 100%;
+            height: 50px;
+            background-color: #418686;
+            color: white;
+            font-size: large;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-img">
+            <div class="header-img-mask">
+                <div class="menu">
+                    <div class="menu-items">
+                        <div class="menu-item menu-item-focus" id="home">
+                            الرئيسية
+                        </div>
+                        <div class="menu-item" id="courses">
+                            دورات
+                        </div>
+                        <div class="menu-item" id="articles">
+                            مقالات
+                        </div>
+                        <div class="menu-item" id="summaries">
+                            ملخصات
+                        </div>
+                        <div class="menu-item" id="resources">
+                            مصادر
+                        </div>
+                    </div>
+                </div>
+                <H2 id="title">
+                    أكاديمية ترميز
+                </H2>
+                <div id="logo-circle">
+                    <img id="logo" src="img/white-logo.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="banners-container">
+        <div id="banners-title">
+            <h1>أكاديمية ترميز لتعليم البرمجة</h1>
+        </div>
+        <div id="banners">
+            <div class="banner" id="banner-1">
+                <h3>دروس منوعة &#9989;</h3>
+            </div>
+            <div class="banner" id="banner-1">
+                <h3>باللغة العربية &#9989;</h3>
+            </div>
+            <div class="banner" id="banner-1">
+                <h3>بجودة عالية &#9989;</h3>
+            </div>
+        </div>
+    </div>
+    <div id="courses-container">
+        <H1 id="courses-title">
+            دورات تطوير المواقع
+        </H1>
+        <div id="courses">
+            <div class="course">
+                <img class="course-img" src="img/html-course.png" alt="">
+                <div class="course-info">
+                    <div class="course-name">
+                        سلسلة دروس الhtml
+                    </div>
+                    <div class="show-container"> <button class="show">مشاهدة</button></div>
+
+                </div>
+            </div>
+            <div class="course">
+                <img class="course-img" src="img/css-course.png" alt="">
+                <div class="course-info">
+                    <div class="course-name">
+                        سلسلة دروس الCSS
+                    </div>
+                    <div class="show-container"> <button class="show">مشاهدة</button></div>
+
+                </div>
+            </div>
+            <div class="course">
+                <img class="course-img" src="img/git-course.png" alt="">
+                <div class="course-info">
+                    <div class="course-name">
+                        سلسلة دروس الGit
+                    </div>
+                    <div class="show-container"> <button class="show">مشاهدة</button></div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="footer">
+        جميع الحقوق محفوظة - أكاديمية ترميز 2024
+    </div>
+</body>
+
+</html>
